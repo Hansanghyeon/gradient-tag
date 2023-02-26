@@ -1,34 +1,98 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
 import styled from '@emotion/styled'
 import tw from 'twin.macro'
+import Tag from 'Tags'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div tw="container mx-auto">
+      <div tw="max-w-[800px] flex flex-wrap gap-[10px] justify-center">
+        {[
+          {
+            title: 'C',
+            link: '/',
+            active: true,
+          },
+          {
+            title: 'C++',
+            link: '/',
+          },
+          {
+            title: 'Java',
+            link: '/',
+          },
+          {
+            title: 'Python',
+            link: '/',
+          },
+          {
+            title: 'JavaScript',
+            link: '/',
+          },
+          {
+            title: 'Ruby',
+            link: '/',
+          },
+          {
+            title: 'Go',
+            link: '/',
+          },
+          {
+            title: 'Rust',
+            link: '/',
+          },
+          {
+            title: 'Swift',
+            link: '/',
+          },
+          {
+            title: 'Kotlin',
+            link: '/',
+            active: true,
+          },
+          {
+            title: 'HTML',
+            link: '/',
+          },
+          {
+            title: 'CSS',
+            link: '/',
+          },
+          {
+            title: 'JavaScript',
+            link: '/',
+            active: true,
+          },
+          {
+            title: 'React',
+            link: '/',
+          },
+          {
+            title: 'Vue.js',
+            link: '/',
+          },
+          {
+            title: 'Angular',
+            link: '/',
+          },
+          {
+            title: 'Node.js',
+            link: '/',
+          },
+          {
+            title: 'Express',
+            link: '/',
+            active: true,
+          },
+          {
+            title: 'Django',
+            link: '/',
+          },
+          {
+            title: 'Flask',
+            link: '/',
+          },
+        ].map(props => <Tag {...props} tw="font-bold" />)}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <Button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </Button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
   )
 }
